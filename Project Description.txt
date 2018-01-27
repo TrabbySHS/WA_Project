@@ -1,0 +1,34 @@
+Task Management WEBAPP
+---------------------------
+
+This Web App was meant as a web panel and server. It is JSON provider for other clients.
+
+Context of system:
+Users can add and manage tasks, they are assinged to groups ( still have to figure out how to make it ). 
+When the new task is added ( clients keep looking for it by refreshing ), both desktop app and android app get the data, displaying notification etc.
+JSON is provided from selected task as a link *site*.json 
+
+
+The system contains of:
+
+Android App - Allow user to login, display current tasks list, allow user to show more about selected task, send notification when new task (JSON) appears.
+Desktop App - The same as Android App.
+
+Web App -as a data provider
+
+
+Group:
+Kamil Motyl
+
+
+
+
+Problems:
+
+Can't fill group(id) field for user created using devise, even though I redefined registration params in custom Register Controller.
+User table was updated and route specified. 
+
+Group id for user would be used to tag added tasks so they can be vissible to any member of such group. This would help to reduce range of tasks to that of group id,
+which would later mean more precise JSONs uploaded.
+
+

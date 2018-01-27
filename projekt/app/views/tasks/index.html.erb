@@ -1,0 +1,11 @@
+<div class="col-md-8 col-md-offset-2">
+<h1>Tasks</h1>
+<div style="padding-top: 50px">
+<% @tasks.each do |task| %>
+	<div><span class="lead"><%= task.title %></span>
+		<span class="pull-right lead"><%= task.priority %></span></div>
+		<p>Creation time: <%= task.created_at %> <span class="glyphicon glyphicon-time"></p>
+	<div style="padding: 25px 0px 75px 0px;"><%= link_to "More", task_path(task), :class=>"btn btn-default", :role=>"button"  %></div>
+<% end %>
+</div>
+</div>

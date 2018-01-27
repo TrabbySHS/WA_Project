@@ -1,0 +1,15 @@
+<div class="col-md-8 col-md-offset-2">
+	<h1>Title: <%= @task.title %></h1>
+	<div style="padding-top: 50px;">
+		<p>Created by: <%= @task.user.email %></p>
+		<p>Creation time: <%= @task.created_at %> <span class="glyphicon glyphicon-time"></p>
+		<p>Description:  <%= @task.description %></p>
+		<p>Priority:  <%= @task.priority %></p>
+		<div style="padding-top: 50px;"> <div style="padding-top: 50px;">
+			<%= link_to "Edit", edit_task_path(@task), :class=>"btn btn-default", :role=>"button" %>  
+			<%= link_to "Back", tasks_path, :class=>"btn btn-default", :role=>"button"  %> 
+			<%= link_to "Delete", task_path(@task), method: :delete, :class=>"btn btn-default", :role=>"button" %>
+		</div>
+		</div>
+	</div>
+</div>
